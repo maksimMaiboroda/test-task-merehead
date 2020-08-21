@@ -1,0 +1,30 @@
+.nav {
+  grid-area: nav;
+  
+}
+
+.linkItem {
+  text-decoration: none;
+  display: block;
+  color: #285473;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.linkItem {
+  border: 1px solid #a4adbb;
+}
+
+.linkItem:hover {
+  background-color: #a4adbb;
+  color: #1D2129;
+  transition: background-color 0.5s;
+}
+
+.nav a.activeLink {
+  color: #1D2129;
+  border: 1px solid #1D2129;
+  transition: border 0.5s;
+}
