@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/test-task-merehead/static/css/main.3d194832.chunk.css",
+    "main.js": "/test-task-merehead/static/js/main.a283bcb2.chunk.js",
+    "main.js.map": "/test-task-merehead/static/js/main.a283bcb2.chunk.js.map",
+    "runtime-main.js": "/test-task-merehead/static/js/runtime-main.fa416944.js",
+    "runtime-main.js.map": "/test-task-merehead/static/js/runtime-main.fa416944.js.map",
+    "static/js/2.435a5cbb.chunk.js": "/test-task-merehead/static/js/2.435a5cbb.chunk.js",
+    "static/js/2.435a5cbb.chunk.js.map": "/test-task-merehead/static/js/2.435a5cbb.chunk.js.map",
+    "index.html": "/test-task-merehead/index.html",
+    "precache-manifest.fc06ea78f4713a7f461f3b1e9b3bac26.js": "/test-task-merehead/precache-manifest.fc06ea78f4713a7f461f3b1e9b3bac26.js",
+    "service-worker.js": "/test-task-merehead/service-worker.js",
+    "static/css/main.3d194832.chunk.css.map": "/test-task-merehead/static/css/main.3d194832.chunk.css.map",
+    "static/js/2.435a5cbb.chunk.js.LICENSE.txt": "/test-task-merehead/static/js/2.435a5cbb.chunk.js.LICENSE.txt",
+    "static/media/userLogo.png": "/test-task-merehead/static/media/userLogo.37ae71c0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fa416944.js",
+    "static/js/2.435a5cbb.chunk.js",
+    "static/css/main.3d194832.chunk.css",
+    "static/js/main.a283bcb2.chunk.js"
+  ]
+}
