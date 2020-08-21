@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -6,8 +6,16 @@ import * as Yup from "yup";
 import classes from "./CreateUser.module.scss";
 import { Redirect } from "react-router-dom";
 
-const CreateUser = ({ addUser }) => {
+const CreateUser = ({ addUser, requestUsers }) => {
   const [isUser, setUser] = useState(false);
+
+  useEffect(() => {
+    return () => {
+      setTimeout(() => {
+        requestUsers();
+      }, 1000);
+    };
+  }, []);
 
   if (isUser) {
     return <Redirect to={"/users"} />;

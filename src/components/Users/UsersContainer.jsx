@@ -3,7 +3,7 @@ import React from "react";
 import Users from "./Users";
 import { connect } from "react-redux";
 import { gerUsersSelector, isUsersLoaded, isRerender } from "../../redux/usersSelectors";
-import { requestUsers, userDelete } from "../../redux/reducers/usersReducer";
+import { requestUsers, userDelete } from "../../redux/actions/actions";
 
 let UsersContainer = (props) => {
   return <Users {...props} />;

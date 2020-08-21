@@ -1,7 +1,7 @@
 import React from "react";
 import CreateUser from "./CreateUser";
 import { connect } from "react-redux";
-import {addUser} from "../../redux/reducers/usersReducer"
+import {addUser, requestUsers} from "../../redux/actions/actions"
 
 
 
@@ -17,4 +17,4 @@ let mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { addUser })(CreateUserContainer);
+export default connect(mapStateToProps, { addUser, requestUsers })(CreateUserContainer);

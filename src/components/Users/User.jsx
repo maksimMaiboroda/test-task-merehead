@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "./Users.module.scss";
 
@@ -21,8 +21,15 @@ const useStyles = makeStyles({
   },
 });
 
-let User = ({ id, name, surname, desc, userDelete }) => {
+let User = ({ id, name, surname, desc, userDelete, requestUsers }) => {
   const classes = useStyles();
+
+  const Dell = (id) => {
+    userDelete(id);
+    setTimeout(() => {
+      requestUsers();
+    }, 1000);
+  };
 
   return (
     <Card className={styles.user}>
@@ -44,11 +51,7 @@ let User = ({ id, name, surname, desc, userDelete }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button
-          onClick={userDelete.bind(this, id)}
-          size="small"
-          color="primary"
-        >
+        <Button onClick={Dell.bind(this, id)} size="small" color="primary">
           Delete
         </Button>
         <Button size="small" color="primary">
