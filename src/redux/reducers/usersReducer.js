@@ -33,14 +33,14 @@ export const requestUsers = () => {
 export const addUser = (user) => {
   return async (dispatch) => {
     await userAPI.addUser(user);
-    /* requestUsers(); */
+    requestUsers();
   };
 };
 
 export const userDelete = (id) => {
   return async (dispatch) => {
     await userAPI.userDel(id);
-    /* requestUsers(); */
+    requestUsers();
   };
 };
 

@@ -6,11 +6,11 @@ import Preloader from "../common/Preloader/Preloader";
 let Users = ({ requestUsers, users, usersLoaded, userDelete }) => {
   useEffect(() => {
     requestUsers();
-  }, []);
+  }, [users]);
 
   return (
     <div>
-      {/* {!usersLoaded ? <Preloader /> : null} */}
+      {!usersLoaded ? <Preloader /> : null}
       <div className={classes.usersContainer}>
         <div className={classes.users}>
           {users.map((user) => {
