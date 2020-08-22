@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { Route, BrowserRouter } from "react-router-dom";
 import UsersContainer from "./components/Users/UsersContainer";
 import CreateUserContainer from "./components/CreateUser/CreateUserContainer";
+import ChengeUserContainer from "./components/ChengeUser/ChengeUserContainer";
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
               <Route
                 path="/create-user"
                 component={CreateUserContainer}
+                className={classes.content}
+              />
+              <Route
+                path="/chenge-user"
+                component={ChengeUserContainer}
                 className={classes.content}
               />
               <Route

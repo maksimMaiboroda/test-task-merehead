@@ -23,3 +23,9 @@ export const userDelete = (id) => {
     await userAPI.userDel(id);
   };
 };
+
+export const userChange = (id, data) => {
+  return async (dispatch) => {
+    await userAPI.updateUser(id, data);
+  };
+};

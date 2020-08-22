@@ -16,4 +16,8 @@ export const userAPI = {
   userDel(id) {
     return instanse.delete(`user/${id}`);
   },
+
+  updateUser(id, data) {
+    return instanse.put(`user/${id}`, data);
+  },
 };

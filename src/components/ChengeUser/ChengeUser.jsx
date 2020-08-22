@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
 
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 import classes from "./CreateUser.module.scss";
+import { Redirect } from "react-router-dom";
 
-const CreateUser = ({ addUser, requestUsers }) => {
+const ChengeUser = ({ addUser, requestUsers }) => {
   const [isUser, setUser] = useState(false);
 
   useEffect(() => {
@@ -56,4 +56,4 @@ const CreateUser = ({ addUser, requestUsers }) => {
   );
 };
 
-export default CreateUser;
+export default ChengeUser;
