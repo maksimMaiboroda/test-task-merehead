@@ -2,13 +2,14 @@ import { userAPI } from "../../api/api";
 import { SET_USERS, USERS_LOADED } from "../types/types";
 
 export const setUsers = (users) => ({ type: SET_USERS, users });
-export const usersLoaded = () => ({ type: USERS_LOADED });
+export const usersLoaded = (statusLoaded) => ({ type: USERS_LOADED, payload: statusLoaded });
 
 export const requestUsers = () => {
   return async (dispatch) => {
+    dispatch(usersLoaded(true));
     let data = await userAPI.getUsers();
     dispatch(setUsers(data));
-    dispatch(usersLoaded());
+    dispatch(usersLoaded(false));
   };
 };
 

@@ -2,7 +2,7 @@ import { SET_USERS, USERS_LOADED } from "../types/types";
 
 let initialState = {
   users: [],
-  usersLoaded: false,
+  usersLoaded: null,
   statusDeleted: false,
 };
 
@@ -13,7 +13,7 @@ const usersReducer = (state = initialState, action) => {
     }
 
     case USERS_LOADED: {
-      return { ...state, usersLoaded: true };
+      return { ...state, usersLoaded: action.payload };
     }
 
     default:

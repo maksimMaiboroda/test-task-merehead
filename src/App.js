@@ -20,6 +20,11 @@ function App() {
           <Navbar className={classes.navbar} />
           <div className={classes.wrapper}>
             <div className={classes.contentWrapper}>
+            <Route
+                path="/"
+                component={UsersContainer}
+                className={classes.content}
+              />
               <Route
                 path="/create-user"
                 component={CreateUserContainer}

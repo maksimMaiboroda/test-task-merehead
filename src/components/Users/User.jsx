@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import styles from "./Users.module.scss";
 
@@ -7,7 +7,6 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import LogoComponent from "../common/LogoComponent/LogoComponent";
@@ -21,7 +20,7 @@ const useStyles = makeStyles({
   },
 });
 
-let User = ({ id, name, surname, desc, userDelete, requestUsers }) => {
+let User = ({ users, usersLoaded, userDelete, requestUsers }) => {
   const classes = useStyles();
 
   const Dell = (id) => {
@@ -32,33 +31,43 @@ let User = ({ id, name, surname, desc, userDelete, requestUsers }) => {
   };
 
   return (
-    <Card className={styles.user}>
-      <CardActionArea>
-        <div className={classes.UserLogo}>
-          <LogoComponent className={classes.UserLogo} />
-        </div>
+    <>
+      {users.map((user) => {
+        return (
+          <Card key={user.id} className={styles.user}>
+            <CardActionArea>
+              <div className={classes.UserLogo}>
+                <LogoComponent className={classes.UserLogo} />
+              </div>
 
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {name}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="h2">
-            {surname}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {desc}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button onClick={Dell.bind(this, id)} size="small" color="primary">
-          Delete
-        </Button>
-        <Button size="small" color="primary">
-          Сhange
-        </Button>
-      </CardActions>
-    </Card>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {user.name}
+                </Typography>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {user.surname}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {user.desc}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                onClick={Dell.bind(this, user.id)}
+                size="small"
+                color="primary"
+              >
+                Delete
+              </Button>
+              <Button size="small" color="primary">
+                Сhange
+              </Button>
+            </CardActions>
+          </Card>
+        );
+      })}
+    </>
   );
 };
 
